@@ -1,4 +1,4 @@
-numero=1500000
+numero=15000
 lista=list(str(numero))
 contador=0
 if lista[-1]!='0':

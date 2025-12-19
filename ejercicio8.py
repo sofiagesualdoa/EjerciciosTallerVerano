@@ -1,4 +1,4 @@
-numero=5712
+numero=57192
 cadena=str(numero)
 mayor=max(cadena)
-print(f"El dígito mayor del número es: {mayor}")
+print(f"El digito mayor del número es: {mayor}")

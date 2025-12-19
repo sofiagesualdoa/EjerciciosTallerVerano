@@ -1,4 +1,4 @@
-palabra="Sdo"
+palabra="Soleado"
 if len(palabra) >= 6:
     print("Longitud válida")
 else:
