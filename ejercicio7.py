@@ -6,3 +6,4 @@ if(len(lista) >= 2):
     print(f"Lista modificada: {lista}")
 else:
     print(f"La lista queda igual: {lista}")
+# Martu: Perfecto :)!!
