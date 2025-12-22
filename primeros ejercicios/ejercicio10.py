@@ -9,3 +9,4 @@ else:
         if elemento=='0':
             contador+=1
     print(f"Hay {contador} ceros")
+# Martu: Muy bien hecho!! :D

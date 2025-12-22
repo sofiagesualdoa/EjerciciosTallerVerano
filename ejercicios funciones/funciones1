@@ -1,0 +1,12 @@
+def dividirCadena(cadena):
+    listaNueva=[]
+    index=0
+    while index < len(cadena):
+        listaNueva.append(cadena[index:index+2])
+        index+=2    
+    if(len(listaNueva[-1])!=2):
+        listaNueva[-1]=f"{listaNueva[-1]}_"
+    return listaNueva
+
+cad="Hoy es un día soleado"
+print(f"cadena dividida: {dividirCadena(cad)}")

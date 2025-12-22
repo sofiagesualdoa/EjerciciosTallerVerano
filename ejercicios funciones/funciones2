@@ -1,0 +1,10 @@
+def puntos(cadena):
+    puntos = 0
+    if cadena[1]==".":
+        for carac in cadena:
+            if carac==".":
+                puntos+=1
+    return puntos
+
+cadena=".....Hola"
+print(puntos(cadena))
