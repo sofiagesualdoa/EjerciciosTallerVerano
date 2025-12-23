@@ -1,4 +1,4 @@
-def Productos(lista, M):
+def productos(lista, M): 
     listaNueva=[]
     for prod in lista:
         if listaNueva==[]:
@@ -15,5 +15,7 @@ def Productos(lista, M):
     return listaNueva[0:M]
 
 lista=[{"prod":"pan", "pre": 100}, {"prod":"arroz", "pre": 50}, {"prod":"leche", "pre": 90}, {"prod":"carne", "pre": 300}]
-M=2
-print(Productos(lista, M))
+M=1
+print(productos(lista, M))
+
+# Martu: Muy bien hecho!! :D

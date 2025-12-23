@@ -1,0 +1,27 @@
+# def puntos(cadena):
+#     puntos = 0
+#     if cadena[1]==".":
+#         for carac in cadena:
+#             if carac==".":
+#                 puntos+=1
+#     return puntos
+
+# cadena=".....Hola"
+# print(puntos(cadena))
+
+# Martu: Rehacer comprendiendo que hay que dejar de ejecutar el bucle en algún momento dado para que sólo sean contados 
+# los puntos al inicio de la cadena (pista: antes de cualquier otro caracter).
+
+# corregido:
+def puntos(cadena):
+    puntos = 0
+    if cadena[1]==".":
+        for carac in cadena:
+            if carac==".":
+                puntos+=1
+            else:
+                break
+    return puntos
+
+cadena=".....Hola.."
+print(puntos(cadena))

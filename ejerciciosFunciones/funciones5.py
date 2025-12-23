@@ -1,4 +1,4 @@
-def Invertir(cadena):
+def invertir(cadena): 
     lista=cadena.split()
     cadena=""
     for elemento in lista:
@@ -6,4 +6,6 @@ def Invertir(cadena):
         cadena+=f"{elemento} "
     return cadena
 cadena="Esto es ejemplo"
-print(f"Cadena invertida: {Invertir(cadena)}")
+print(f"Cadena invertida: {invertir(cadena)}")
+
+# Martu: Bien!!

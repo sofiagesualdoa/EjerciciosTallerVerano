@@ -6,5 +6,7 @@ def cercano(lista, numero):
     return elementoCercano
 
 lista=[3,5,12,15,22]
-numero=9
+numero=30
 print(f"Elemento más cercano a {numero} en la lista: {cercano(lista, numero)}")
+
+# Martu: Excelente trabajo!! :)
