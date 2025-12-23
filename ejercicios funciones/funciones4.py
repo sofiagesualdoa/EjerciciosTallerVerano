@@ -6,4 +6,3 @@ def ArreglarCadena(cadNueva):
 
 cadena="hay pájaros y flores"
 print(f"Cadena arreglada: {ArreglarCadena(cadena)}")
-print(cadena)

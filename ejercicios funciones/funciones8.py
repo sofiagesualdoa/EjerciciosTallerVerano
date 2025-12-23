@@ -7,5 +7,5 @@ def Coincidencia(c1, c2):
     return resultado
 
 cadena1="Esto es una estatua"
-cadena2="una"
+cadena2="st"
 print(Coincidencia(cadena1,cadena2))

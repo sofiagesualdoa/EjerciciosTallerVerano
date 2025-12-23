@@ -5,5 +5,5 @@ def Contador(cadena):
             digitos+=1
     return digitos
 
-cadena="Tengo  años"
+cadena="Tengo 20 años"
 print(f"Dígitos en la cadena: {Contador(cadena)}")
