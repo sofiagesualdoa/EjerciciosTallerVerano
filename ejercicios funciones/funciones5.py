@@ -1,4 +1,4 @@
-def Invertir(cadena):
+def Invertir(cadena): # Minúsculas...
     lista=cadena.split()
     cadena=""
     for elemento in lista:
@@ -7,3 +7,5 @@ def Invertir(cadena):
     return cadena
 cadena="Esto es ejemplo"
 print(f"Cadena invertida: {Invertir(cadena)}")
+
+# Martu: Bien!!

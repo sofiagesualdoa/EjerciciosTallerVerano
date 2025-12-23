@@ -1,4 +1,4 @@
-def Coincidencia(c1, c2):
+def Coincidencia(c1, c2): # Minúsculas...
     resultado=None
     primeraVez=c1.find(c2)
     segundaVez=c1.find(c2,primeraVez+1)
@@ -9,3 +9,5 @@ def Coincidencia(c1, c2):
 cadena1="Esto es una estatua"
 cadena2="una"
 print(Coincidencia(cadena1,cadena2))
+
+# Martu: Excelente :D

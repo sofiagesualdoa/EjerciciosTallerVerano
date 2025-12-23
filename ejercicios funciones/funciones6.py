@@ -7,3 +7,5 @@ def Contador(cadena):
 
 cadena="Tengo  años"
 print(f"Dígitos en la cadena: {Contador(cadena)}")
+
+# Martu: Excelente :)
