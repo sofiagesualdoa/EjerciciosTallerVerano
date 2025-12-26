@@ -28,3 +28,5 @@ perro=Perro("Beige", "Toto", "Bulldog")
 print(perro.atributos())
 perro.alimentar(5)
 print(perro.atributos())
+
+# Martu: Perfecto!!
