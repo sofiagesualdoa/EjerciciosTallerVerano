@@ -16,3 +16,5 @@ class Circulo:
 circulo=Circulo(5)
 print(f"Área del círculo: {circulo.area()}")
 print(f"Perímetro del círculo: {circulo.perimetro()}")
+
+# Martu: ¡Muy bien! :)
