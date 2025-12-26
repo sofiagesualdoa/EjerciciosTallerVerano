@@ -10,7 +10,7 @@ class Perro:
         self.raza=raza
         self.edad=0
     
-    def atributos(self):
+    def atributos(self): # Martu: Muy bien! También podrías definir el método __str__
         print(f"Nombre: {self.nombre}, Color: {self.color}, Raza: {self.raza}, Edad: {self.edad}")
 
     def felizCumple(self):
@@ -20,3 +20,5 @@ perro=Perro("Beige", "Toto", "Bulldog")
 print(perro.atributos())
 perro.felizCumple()
 print(perro.atributos())
+
+# Martu: Muy bien!!
