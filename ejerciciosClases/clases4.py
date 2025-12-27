@@ -40,6 +40,10 @@ class RobotLucha:
             gano=False
         elif otroRobot.fuerza<=0:
             otroRobot.vivo=False
+        else:
+            otroRobot.vivo=False
+            self.vivo=False
+            gano=False
         return gano
 
 r1=RobotLucha(6)
@@ -51,3 +55,4 @@ print(r1.fuerza)
 print(r2.vivo)
 
 # Martu: Muy bien!!! TODO (opcional): podrías agregar una condición que, en caso de empate, ambos robots queden "muertos"
+# Sofi: hecho
