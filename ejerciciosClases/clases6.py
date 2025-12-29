@@ -86,3 +86,5 @@ class Trapecio(Polígono):
     @property
     def cantLados(self):
         return 4
+    
+# Martu: Impecable!!

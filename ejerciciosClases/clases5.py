@@ -3,7 +3,7 @@
 # Tengo que agregar: Cuadrado, Rombo, Polígono, Trapecio. La clase Cuadrado, hereda de 
 # Rectángulo? O Rectángulo hereda de Cuadrado? O ninguna de las dos?
 
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod # Martu: Je, te adelantaste un ejercicio :)
 from math import pi
 
 class Polígono(ABC):
@@ -101,3 +101,6 @@ class Trapecio(Polígono):
     @property
     def cantLados(self):
         return 4
+    
+# Martu: Muy bien!!! Aunque también podrías hacer una superclase común como "Figura" para que todo el resto de figuras
+# hereden esa superclase, ya que, por ejemplo, el círculo no es un polígono. 
