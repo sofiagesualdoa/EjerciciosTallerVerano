@@ -10,5 +10,7 @@ def contarPalabra(archivo, palabra):
             cantPalabras += palabras.count(palabra)
     return cantPalabras
 
-palabra="Sancho"
-print(f"Cantidad de \"{palabra}\" en el quijote: {contarPalabra("quijote", palabra)}")
+palabra="la"
+print(f"Cantidad de \"{palabra}\" en el quijote: {contarPalabra("prueba", palabra)}")
+
+# Martu: Impecable!!
