@@ -6,3 +6,5 @@ with open("quijote.txt", "rt", encoding="utf-8") as texto1:
         for linea in texto1:
             lineanueva=linea[::-1]
             texto2.write(lineanueva)
+
+# Martu: Perfecto!!

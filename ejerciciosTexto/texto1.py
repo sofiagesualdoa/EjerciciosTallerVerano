@@ -15,3 +15,5 @@ with open("quijote.txt", "rt", encoding="utf-8") as texto1:
             else:
                 texto2.write(linea)
                 lineaBlanca=False
+
+# Martu: Muy bien!!
