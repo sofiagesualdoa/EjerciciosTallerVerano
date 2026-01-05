@@ -1,3 +1,6 @@
+# Trazar un círculo con el movimiento del robot. 
+# IMPORTANTE: Usar el mundo “mapa_circulito.wbt”
+
 from controller import Robot
 
 TIME_STEP=32

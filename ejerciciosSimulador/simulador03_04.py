@@ -1,3 +1,5 @@
+# Girar 180 grados en sentido antihorario y luego frenar.
+
 from controller import Robot
 import math
 

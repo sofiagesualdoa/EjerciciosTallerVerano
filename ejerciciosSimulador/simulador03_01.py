@@ -1,3 +1,5 @@
+# Prender ambos motores a la mitad de la velocidad máxima.
+
 from controller import Robot
 
 TIME_STEP=32

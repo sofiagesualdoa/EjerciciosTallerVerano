@@ -1,3 +1,5 @@
+# Girar 90 grados en sentido horario y luego frenar.
+
 from controller import Robot
 import math
 

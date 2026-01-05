@@ -1,3 +1,5 @@
+# Avanzar una distancia determinada y luego volver a la posición inicial.
+
 from controller import Robot
 
 TIME_STEP=32
@@ -11,8 +13,6 @@ der=robot.getDevice("wheel2 motor")
 der.setPosition(float("inf"))
 encoderIzq=izq.getPositionSensor()
 encoderIzq.enable(TIME_STEP)
-encoderDer=der.getPositionSensor()
-encoderDer.enable(TIME_STEP)
 
 estado="avanzar"
 inicio=0
