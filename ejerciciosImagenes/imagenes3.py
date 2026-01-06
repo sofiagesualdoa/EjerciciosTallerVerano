@@ -12,3 +12,5 @@ img[mitadSuperior+1:,0:mitadIzquierda]=img[0:mitadSuperior,mitadIzquierda+1:]
 cv2.imshow('Foto', img)
 cv2.waitKey(0) 
 cv2.destroyAllWindows()
+
+# Martu: Muy bien!!! :)
