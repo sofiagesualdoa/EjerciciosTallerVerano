@@ -12,3 +12,7 @@ der.setPosition(float("inf"))
 while robot.step(TIME_STEP) != -1:
     izq.setVelocity(MAX_VEL*0,5)
     der.setVelocity(MAX_VEL*0,5)
+
+# Martu: Cuidado porque la velocidad está mal escrita, debería ser MAX_VEL*0.5 (con punto en lugar de coma), ya que
+# en Python el separador decimal es el punto, la "," se usa para separar elementos en listas, etc o listar argumentos 
+# de una función.
