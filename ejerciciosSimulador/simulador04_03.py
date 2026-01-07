@@ -21,4 +21,6 @@ while robot.step(TIME_STEP) != -1:
         der.setVelocity(0)
     else:
         izq.setVelocity(MAX_VEL)
-        der.setVelocity(MAX_VEL)
+        der.setVelocity(MAX_VEL)    
+
+# Martu: Genial!!

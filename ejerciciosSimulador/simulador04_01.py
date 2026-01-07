@@ -9,3 +9,5 @@ sensor=robot.getDevice("ps1")
 sensor.enable(TIME_STEP) 
 while robot.step(TIME_STEP) != -1:
     print(f"Distancia del sensor ps: {sensor.getValue()}")
+
+# Martu: Perfecto!!

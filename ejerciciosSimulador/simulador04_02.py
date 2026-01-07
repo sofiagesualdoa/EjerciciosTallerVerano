@@ -16,3 +16,5 @@ while robot.step(TIME_STEP) != -1:
     print(f"Distancia del sensor ps1: {sensor1.getValue()}")
     print(f"Distancia del sensor ps2: {sensor2.getValue()}")
     break
+
+# Martu: Perfecto!! Aunque, el break no es necesario :)

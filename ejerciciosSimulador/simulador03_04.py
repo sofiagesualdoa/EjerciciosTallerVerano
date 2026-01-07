@@ -26,3 +26,5 @@ while robot.step(TIME_STEP) != -1:
         izq.setVelocity(0)
         der.setVelocity(0)
         break
+
+# Martu: Muy bien!! Igual que en el otro ejercicio, el robot no termina de hacer los 180°, por lo que hay un TODO común :)

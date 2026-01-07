@@ -15,3 +15,5 @@ der.setPosition(float("inf"))
 while robot.step(TIME_STEP) != -1:
     izq.setVelocity(MAX_VEL*0.8)
     der.setVelocity(MAX_VEL*0.5)
+
+# Martu: Rehacer para que el robot pueda "trazar un círculo" bordeando el mapa "mapa_circulito.wbt" :p.

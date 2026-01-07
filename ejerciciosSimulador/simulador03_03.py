@@ -26,3 +26,7 @@ while robot.step(TIME_STEP) != -1:
         izq.setVelocity(0)
         der.setVelocity(0)
         break
+
+# Martu: Está bien!! Fijate que no hace falta declarar los encoders de las dos ruedas si solo usás uno, y el robot
+# no termina de hacer los 90°, TODO: ¿Existe algún sensor giroscopio o alguno similar que te permita mejorar el 
+# comportamiento actual del código?.

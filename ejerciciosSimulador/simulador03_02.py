@@ -32,3 +32,5 @@ while robot.step(TIME_STEP) != -1:
     else:
         izq.setVelocity(0)
         der.setVelocity(0)
+
+# Martu: Muy bien!!
