@@ -61,11 +61,11 @@ def girar(cuantoRotar):
     setVel(0, 0)
 
 while step() != -1:
-    girar(170)
-    delay(5000)
-    girar(40)
-    delay(5000)
+    girar(180)
+    # delay(5000)
+    # girar(40)
+    # delay(5000)
     break
 
-
+# Martu: Genial!!
 
