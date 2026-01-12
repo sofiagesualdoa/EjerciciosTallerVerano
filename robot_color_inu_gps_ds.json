@@ -110,5 +110,19 @@
 		"rz": 0.5858,
 		"a": 2.09,
 		"custom": []
+	},
+	"colsensor": {
+		"dictName": "colsensor",
+		"name": "Colour sensor",
+		"customName": "colour_sensor",
+		"type": "add",
+		"x": 0,
+		"y": 0,
+		"z": -370,
+		"rx": -0.71,
+		"ry": 0,
+		"rz": 0.71,
+		"a": 3.14,
+		"custom": []
 	}
 }
