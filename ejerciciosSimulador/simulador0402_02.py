@@ -103,3 +103,6 @@ while step()!=-1:
         elif adelante.getValue() < 0.06:
             girar(90)
 # falta terminar
+
+# Martu: Está bien! Te aconsejo que de alguna manera puedas "almacenar" qué lugares del mapa recorriste y cuáles no, 
+# lo que te ayudaría a poder terminar de recorrer el mapa completo :).

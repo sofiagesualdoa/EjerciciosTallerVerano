@@ -90,3 +90,7 @@ while step() != -1:
         pass
     elif derecha.getValue() > 0.08:
         girar(-90)
+
+# Martu: Probé el código en el mapa "mapa_noholes_1" (ahí lo subo) llega un momento dado de la simulación en donde el
+# robot se termina chocando con una pared, creo que podría ser el error de las variables globales que se viene arrastrando
+# hace un par de ejercicios.

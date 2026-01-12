@@ -51,6 +51,11 @@ def avanzar(dist):
 while step() != -1:
     avanzar(0.5)   
     delay(3000)
-    avanzar(1.2)  
-    delay(3000)
+    # avanzar(1.2)  
+    # delay(3000)
     break
+
+# Martu: Fijate que en el simulador no termina frenando el robot... En el método updateVars se invoca a las variables 
+# globales x, z pero ninguna está declarada por fuera del método. También, podrías en vez de usar una velocidad estándar
+# para avanzar, ir regulándola con ayuda de una función lineal, que vaya disminuyendo la velocidad conforme el robot
+# se vaya acercando a la distancia destino.

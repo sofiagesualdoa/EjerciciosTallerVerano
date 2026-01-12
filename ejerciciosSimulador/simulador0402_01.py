@@ -26,3 +26,5 @@ while robot.step(TIME_STEP) != -1:
         print("Es pantano")
     elif r==41 and g==41 and b==41:
         print("Es un agujero")
+
+# Martu: Bien!! Yo te recomiendo reemplazar los valores fijos de comparación por rangos relativos :p
