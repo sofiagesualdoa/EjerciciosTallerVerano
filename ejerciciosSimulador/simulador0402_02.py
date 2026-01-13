@@ -65,43 +65,39 @@ def girar(cuantoRotar):
         setVel(-MAX_VEL/5*sentido, MAX_VEL/5*sentido)
     setVel(0, 0)
 
-def evitarAgujero():
-    print("Hay un agujero delante")
-    setVel(0,0)
-    delay(300)
-    setVel(-MAX_VEL/6, -MAX_VEL/6)
-    delay(800)
-    setVel(0,0)
-    girar(90)
+agujero=False
 
-while step()!=-1:
-    b, g, r, a = colorSensor.getImage()
-    print(izquierda.getValue(), derecha.getValue(), adelante.getValue())
+while step()!=-1: 
+    b,g,r,a = colorSensor.getImage()
+    print(f"izq: {izquierda.getValue()}, der: {derecha.getValue()}, ad: {adelante.getValue()}")
     if r==41 and g==41 and b==41:
-        evitarAgujero()
+        print("Agujero detectado")
+        agujero=True
+        setVel(-MAX_VEL/5, -MAX_VEL/5)
+        delay(1000)
+        setVel(0,0)
+        girar(90)
         continue
-    elif r==209 and g==175 and b==101:
-        print("Hay un Pantano, vamos más despacio")
-        setVel(MAX_VEL/8, MAX_VEL/8)
-        if  adelante.getValue() > 0.079:
-            pass
-        elif izquierda.getValue() > 0.079:
+    if agujero==True:
+        girar(90)  
+        while adelante.getValue() < 0.08:
             girar(90)
-        elif derecha.getValue() > 0.079:
-            girar(-90)
-        elif adelante.getValue() < 0.06:
-            girar(90)
-    elif r==231 and g==231 and b==231:
-        print("Es baldosa normal")
-        setVel(MAX_VEL/5, MAX_VEL/5)
-        if  adelante.getValue() > 0.079:
-            pass
-        elif izquierda.getValue() > 0.079:
-            girar(90)
-        elif derecha.getValue() > 0.079:
-            girar(-90)
-        elif adelante.getValue() < 0.06:
-            girar(90)
+        setVel(MAX_VEL/6, MAX_VEL/6)
+        delay(4000)
+        agujero=False 
+    if r==209 and g==175 and b==101:
+        velocidad=MAX_VEL/6
+    else:
+        velocidad=MAX_VEL/4
+    if izquierda.getValue() < 0.1 and adelante.getValue() > 0.07:
+        setVel(velocidad, velocidad)
+    elif izquierda.getValue() < 0.1 and adelante.getValue() < 0.08 and derecha.getValue() >= 0.8:
+        girar(-90)
+    elif adelante.getValue() < 0.08:
+        girar(90)
+    else:
+        girar(90)
+
 # falta terminar
 
 # Martu: Está bien! Te aconsejo que de alguna manera puedas "almacenar" qué lugares del mapa recorriste y cuáles no, 

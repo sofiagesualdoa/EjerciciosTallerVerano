@@ -21,10 +21,11 @@ der.setPosition(float("inf"))
 gps=robot.getDevice("gps")
 gps.enable(TIME_STEP)
 
+z=0
+x=0
 def updateVars():
     global x,z
     x,_,z=gps.getValues()
-    print(x,z)
 
 def step():
     resu=robot.step(TIME_STEP)
@@ -38,24 +39,29 @@ def delay(ms):
             break
 
 def avanzar(dist):
-    xInicial, zInicial=x, z
-    setVel(MAX_VEL/5, MAX_VEL/5)
-    while step() != -1:
+    xInicial,zInicial=x,z
+    while step()!=-1:
         dx=x-xInicial
         dz=z-zInicial
         distancia=math.sqrt(dx*dx + dz*dz)
-        if distancia >= dist:
+        if distancia>=dist:
             break
+        vel=MAX_VEL
+        if dist/2<=distancia:
+            vel=vel/2
+        setVel(vel, vel)
     setVel(0, 0)
 
 while step() != -1:
     avanzar(0.5)   
     delay(3000)
-    # avanzar(1.2)  
-    # delay(3000)
+    avanzar(1.2)  
+    delay(3000)
     break
 
 # Martu: Fijate que en el simulador no termina frenando el robot... En el método updateVars se invoca a las variables 
 # globales x, z pero ninguna está declarada por fuera del método. También, podrías en vez de usar una velocidad estándar
 # para avanzar, ir regulándola con ayuda de una función lineal, que vaya disminuyendo la velocidad conforme el robot
 # se vaya acercando a la distancia destino.
+
+# corregido

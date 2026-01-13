@@ -31,6 +31,8 @@ adelante.enable(TIME_STEP)
 
 gradoRot=0
 radianRot=0
+x=0
+z=0
 
 def updateVars():
     global x,z,radianRot, gradoRot
@@ -51,8 +53,10 @@ def delay(ms):
 
 def avanzar(dist):
     xInicial, zInicial=x, z
-    setVel(MAX_VEL/5, MAX_VEL/5)
+    setVel(MAX_VEL/2, MAX_VEL/2)
     while step() != -1:
+        if adelante.getValue() < 0.06:
+            break
         dx=x-xInicial
         dz=z-zInicial
         distancia=math.sqrt(dx*dx + dz*dz)
@@ -94,3 +98,5 @@ while step() != -1:
 # Martu: Probé el código en el mapa "mapa_noholes_1" (ahí lo subo) llega un momento dado de la simulación en donde el
 # robot se termina chocando con una pared, creo que podría ser el error de las variables globales que se viene arrastrando
 # hace un par de ejercicios.
+
+# corregido creo?
