@@ -53,10 +53,10 @@ def avanzar(dist):
     setVel(0, 0)
 
 while step() != -1:
-    avanzar(0.5)   
+    avanzar(0.12)   
     delay(3000)
-    avanzar(1.2)  
-    delay(3000)
+    # avanzar(1.2)  
+    # delay(3000)
     break
 
 # Martu: Fijate que en el simulador no termina frenando el robot... En el método updateVars se invoca a las variables 
@@ -65,3 +65,7 @@ while step() != -1:
 # se vaya acercando a la distancia destino.
 
 # corregido
+
+# Martu: Bien!! Podrías incluso hacer una función que pasándole la distancia restante, defina cuál debe ser la velocidad 
+# sabiendo que cuando la distancia restante es menor o igual a X debe ser cero o muy cercana a él, y al revés si la
+# distancia es grande (no obligatorio).

@@ -100,3 +100,6 @@ while step() != -1:
 # hace un par de ejercicios.
 
 # corregido creo?
+
+# Martu: Perfecto!! Ahora, para subir un poco la complejidad, podrías hacer que el robot vaya compensando su rotación 
+# para evitar que conforme avance la simulación este se tuerza (opcional).
