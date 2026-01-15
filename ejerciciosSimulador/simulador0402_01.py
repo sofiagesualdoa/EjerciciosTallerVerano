@@ -20,6 +20,7 @@ def esAgujero(r, g, b):
 
 while robot.step(TIME_STEP) != -1:
     b, g, r, a = colorSensor.getImage()
+    print(f"R: {r}, G: {g}, B: {b}")
     if esPantano(r, g, b):
         print(f"{robot.getTime():.2f}: Es Pantano")
     elif esAgujero(r, g, b):
@@ -30,3 +31,5 @@ while robot.step(TIME_STEP) != -1:
 # Martu: Bien!! Yo te recomiendo reemplazar los valores fijos de comparación por rangos relativos :p
 
 # corregido
+
+# Martu: Fijate que en el mapa easy1, no detecta correctamente el pantano...
