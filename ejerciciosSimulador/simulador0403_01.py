@@ -35,3 +35,5 @@ while robot.step(TIME_STEP) != -1:
     img = np.frombuffer(bytes(pixels), np.uint8).reshape((1*32, 512))
     cv2.imshow("LiDAR Capa 1", img)
     cv2.waitKey(1)
+
+# Martu: Muy bien!!
