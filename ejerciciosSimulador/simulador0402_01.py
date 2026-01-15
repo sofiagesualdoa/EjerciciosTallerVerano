@@ -9,9 +9,9 @@ colorSensor = robot.getDevice("colour_sensor")
 colorSensor.enable(TIME_STEP)
 
 def esPantano(r, g, b):
-    return abs(r - 244) < 15 \
-        and abs(g - 221) < 15 \
-        and abs(b - 141) < 15
+    return abs(r - 209) < 15 \
+        and abs(g - 175) < 15 \
+        and abs(b - 101) < 15
 
 def esAgujero(r, g, b):
     return abs(r - 41) < 15 \
@@ -33,3 +33,5 @@ while robot.step(TIME_STEP) != -1:
 # corregido
 
 # Martu: Fijate que en el mapa easy1, no detecta correctamente el pantano...
+
+# corregido
