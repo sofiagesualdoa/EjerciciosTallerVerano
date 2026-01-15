@@ -11,7 +11,7 @@ lidar = robot.getDevice("lidar")
 lidar.enable(TIME_STEP)
 lidar.enablePointCloud()
 
-FOLDER = r"C:\Users\sofig\Documents\point_cloud.csv"
+FOLDER = r"C:\Capacitaciones\Simulado\csv\sofia.csv"
 points=[]
 
 while robot.step(TIME_STEP) != -1:
@@ -23,3 +23,6 @@ with open(FOLDER, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(("x", "y", "z", "layer", "time"))
         writer.writerows(points)
+
+# Martu: Funciona únicamente cuando el archivo csv ya existe previamente, podrías agregar una función que dado un nombre
+# para el csv, cree el archivo si no existe.
