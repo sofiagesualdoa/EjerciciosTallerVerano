@@ -1,5 +1,5 @@
-# Ejercicio 2: hacer una función que dada una imagen, me devuelva el cartel recortado en thresh 
-# (blanco y negro) o None si no es un cartel.
+# Ejercicio 4: realizar una función que dada la imagen de la cámara, me devuelva None si no es un cartel, 
+# o el cartel ya rotado y limpio de contexto.
 
 import math
 import cv2
@@ -18,6 +18,16 @@ def imagen(img):
         resultado=contornos
     return resultado
 
+def buscarContornosThresh(img):
+    global contornos
+    contornos, jerarquia = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+x=0
+y=0
+mitadAlto=0
+mitadAncho=0
+angulo=0
+
 def recortar(img):
     rect=None
     global contornos, thresh, x, y, mitadAlto, mitadAncho, angulo
@@ -31,10 +41,15 @@ def recortar(img):
         rect=img[y-mitadAlto:y+mitadAlto, x-mitadAncho:x+mitadAncho] 
     return rect
 
-img=cv2.imread("imagen1_1.png")
+img=cv2.imread("imagen1_5.png")
 if not imagen(img)==None:
-    rectangulo=recortar(thresh)
-    if not rectangulo == None:
+    alto, ancho=thresh.shape[0], thresh.shape[1]
+    M=cv2.getRotationMatrix2D((ancho/2,alto/2),angulo,1) 
+    thresh_rot=cv2.warpAffine(thresh,M,(ancho,alto))   
+    imagen_rot=cv2.warpAffine(img,M,(ancho,alto))
+    buscarContornosThresh(thresh_rot)
+    rectangulo=recortar(imagen_rot)
+    if rectangulo.all() != None:
         cv2.imshow("Cartel recortado", rectangulo)
         cv2.waitKey(0)
     else:

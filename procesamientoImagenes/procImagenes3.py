@@ -1,5 +1,4 @@
-# Ejercicio 2: hacer una función que dada una imagen, me devuelva el cartel recortado en thresh 
-# (blanco y negro) o None si no es un cartel.
+# Ejercicio 3: armar una función que dada una imagen me devuelva la letra si es un cartel, o None si no lo es.
 
 import math
 import cv2
@@ -18,6 +17,11 @@ def imagen(img):
         resultado=contornos
     return resultado
 
+x=0
+y=0
+mitadAlto=0
+mitadAncho=0
+
 def recortar(img):
     rect=None
     global contornos, thresh, x, y, mitadAlto, mitadAncho, angulo
@@ -31,12 +35,20 @@ def recortar(img):
         rect=img[y-mitadAlto:y+mitadAlto, x-mitadAncho:x+mitadAncho] 
     return rect
 
-img=cv2.imread("imagen1_1.png")
+img=cv2.imread("imagen1_3.png")
 if not imagen(img)==None:
     rectangulo=recortar(thresh)
     if not rectangulo == None:
-        cv2.imshow("Cartel recortado", rectangulo)
-        cv2.waitKey(0)
+        cuadritoArriba=thresh[y-mitadAlto:y-int(mitadAlto/3), x-int(mitadAncho/3):x+int(mitadAncho/3)]
+        cuadritoAbajo=thresh[y+int(mitadAlto/3):y+mitadAlto, x-int(mitadAncho/3):x+int(mitadAncho/3)]
+        pixelesNegrosAbajo=np.count_nonzero(cuadritoAbajo==0)
+        pixelesNegrosArriba=np.count_nonzero(cuadritoArriba==0)
+        if pixelesNegrosAbajo==0 and pixelesNegrosArriba==0:
+            print("Es una H")
+        elif pixelesNegrosArriba==0 and pixelesNegrosAbajo!=0:
+            print("Es una U")
+        elif pixelesNegrosAbajo!=0 and pixelesNegrosArriba!=0:
+            print("Es una S")
     else:
         print(None)
 else:
